@@ -18,7 +18,7 @@ jobs:
       - name: install sbt
         uses: sbt/setup-sbt@v1
       - name: build
-        run: sbt fastOptJs
+        run: sbt fastLinkJS
       - name: predeploy
         run: |
           mkdir pub
