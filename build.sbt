@@ -7,3 +7,4 @@ lazy val root = (project in file(".")).enablePlugins(ScalaJSPlugin)
     scalaJSUseMainModuleInitializer := true,
     name := "hw"
   )
+libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.8.1"
