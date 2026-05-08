@@ -27,11 +27,9 @@ jobs:
           mkdir pub
           cp index.html pub/
           cp target/scala-2.12/hw-fastopt/main.js pub/
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v5.0.0
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: pub
-          include-hidden-files: true
-
-      - name: deploy
-        uses: actions/deploy-pages@v5.0.0
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v5
