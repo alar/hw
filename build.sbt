@@ -8,4 +8,5 @@ lazy val root = (project in file(".")).enablePlugins(ScalaJSPlugin)
     name := "hw"
   )
 libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.8.1"
+jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
 
