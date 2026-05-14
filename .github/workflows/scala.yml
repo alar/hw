@@ -26,8 +26,9 @@ jobs:
       - name: predeploy
         run: |
           mkdir pub
-          cp index.html pub/
-          cp target/scala-2.12/hw-fastopt/main.js pub/
+          mkdir pub/hw-fastopt
+          cp target/scala-2.12/classes/index.html pub/
+          cp target/scala-2.12/hw-fastopt/main.js pub/hw-fastopt/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
