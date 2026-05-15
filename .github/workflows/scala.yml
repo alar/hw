@@ -33,8 +33,8 @@ jobs:
         run: |
           mkdir pub
           mkdir pub/hw-fastopt
-          cp hw/target/scala-2.12/classes/index.html pub/
-          cp hw/target/scala-2.12/hw-fastopt/main.js pub/hw-fastopt/
+          cp /home/runner/work/hw/hw/target/scala-2.12/classes/index.html pub/
+          cp /home/runner/work/hw/hw/target/scala-2.12/classes/hw-fastopt/main.js pub/hw-fastopt/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
