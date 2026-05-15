@@ -21,6 +21,12 @@ jobs:
           cache: 'sbt'
       - name: install sbt
         uses: sbt/setup-sbt@v1
+      - name: Clone patched workbench
+        run: |
+            git clone -b scalajs-1x https://github.com/alar/scala-js-workbench.git
+            cd scala-js-workbench
+            sbt publishLocal
+            cd ..
       - name: build
         run: sbt fastLinkJS
       - name: predeploy
